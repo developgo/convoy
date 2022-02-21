@@ -56,8 +56,12 @@ func NewClient(cfg config.Configuration) (*redis.Client, taskq.Factory, error) {
 func NewQueue(opts queue.QueueOptions) queue.Queuer {
 
 	q := opts.Factory.RegisterQueue(&taskq.QueueOptions{
-		Name:  opts.Name,
-		Redis: opts.Redis,
+		Name:            opts.Name,
+		Redis:           opts.Redis,
+		MaxNumWorker:    convoy.MaxNumWorker,
+		MaxNumFetcher:   convoy.MaxNumFetcher,
+		ReservationSize: convoy.ReservationSize,
+		BufferSize:      convoy.BufferSize,
 	})
 
 	return &RedisQueue{

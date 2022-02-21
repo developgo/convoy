@@ -53,3 +53,17 @@ const (
 	StreamGroup           = "taskq"
 	EventDeliveryIDLength = 12
 )
+
+const (
+	// Maximum number of goroutines processing messages.
+	// Default is 32 * number of CPUs.
+	MaxNumWorker = 10000
+	// Maximum number of goroutines fetching messages.
+	// Default is 8 * number of CPUs.
+	MaxNumFetcher = 10
+	// Number of messages reserved by a fetcher in the queue in one request.
+	// Default is 10 messages.
+	ReservationSize = 10000
+	//Size of the internal buffer
+	BufferSize = 10000
+)
