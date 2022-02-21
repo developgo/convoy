@@ -9,8 +9,8 @@ import (
 	"github.com/frain-dev/convoy/config"
 	"github.com/frain-dev/convoy/datastore"
 	"github.com/frain-dev/convoy/queue"
-	"github.com/vmihailenco/taskq/v3"
-	"github.com/vmihailenco/taskq/v3/memqueue"
+	"github.com/frain-dev/taskq/v3"
+	"github.com/frain-dev/taskq/v3/memqueue"
 )
 
 type MemQueue struct {

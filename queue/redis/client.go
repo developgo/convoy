@@ -12,9 +12,9 @@ import (
 	"github.com/frain-dev/convoy/datastore"
 	"github.com/frain-dev/convoy/queue"
 	"github.com/frain-dev/convoy/util"
+	"github.com/frain-dev/taskq/v3"
+	"github.com/frain-dev/taskq/v3/redisq"
 	"github.com/go-redis/redis/v8"
-	"github.com/vmihailenco/taskq/v3"
-	"github.com/vmihailenco/taskq/v3/redisq"
 )
 
 const count = math.MaxInt64
