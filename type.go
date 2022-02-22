@@ -56,7 +56,7 @@ const (
 
 const (
 	// Maximum number of goroutines processing messages.
-	MaxNumWorker = 10000
+	MaxNumWorker = 1000
 	// Maximum number of goroutines fetching messages.
 	MaxNumFetcher = 10
 	// Number of messages reserved by a fetcher in the queue in one request.
