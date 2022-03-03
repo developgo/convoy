@@ -55,12 +55,10 @@ const (
 )
 
 const (
-	// Maximum number of goroutines processing messages.
-	MaxNumWorker = 1000
 	// Maximum number of goroutines fetching messages.
-	MaxNumFetcher = 10
+	MaxNumFetcher = 100
 	// Number of messages reserved by a fetcher in the queue in one request.
-	ReservationSize = 10000
+	ReservationSize = 100
 	//Size of the internal buffer
-	BufferSize = 10000
+	BufferSize = 100000
 )
